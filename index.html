@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="8;url=intro.html"> <!-- Ganti dengan halaman selanjutnya -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kamu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #caf0f8;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    @keyframes moveHearts {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+
+    .opening-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-top: 25vh;
+      color: #03045e;
+      font-size: 1.8rem;
+    }
+
+    .line {
+      opacity: 0;
+      animation: showLine 1s forwards;
+    }
+
+    .line:nth-child(1) { animation-delay: 0.5s; }
+    .line:nth-child(2) { animation-delay: 2s; }
+    .line:nth-child(3) { animation-delay: 3s; }
+    .line:nth-child(4) { animation-delay: 5s; }
+
+    @keyframes showLine {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts-bg"></div>
+
+  <div class="opening-text">
+    <p class="line">Assalamualaikum...</p>
+    <p class="line">Halo byy</p>
+    <p class="line">Aku punya sesuatu buat kamu hari ini</p>
+    <p class="line">💙💙💙</p>
+  </div>
+
+</body>
+</html>

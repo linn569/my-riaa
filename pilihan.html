@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khusus Buat RIA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #ccefff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .card {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      color: #0077b6;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .btn-group {
+      margin-top: 1.5rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
+    .yes {
+      background-color: #00add8;
+      color: white;
+    }
+
+    .no {
+      background-color: #fd0303;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .yes-big {
+      width: 760px;
+      height: 760px;
+      font-size: 3rem;
+      border-radius: 50%;
+      z-index: 10;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="mainCard">
+    <img src="https://i.imgur.com/WhRbNU8.jpeg" alt="Kucing Imut" />
+    <h1>i love u dear 😻</h1>
+    <p>do you want to be my girlfriend</p>
+    <div class="btn-group">
+      <button class="yes" id="yesBtn" onclick="jawab('yes')">MAU 🥰</button>
+      <button class="no" id="noBtn" onclick="jawab('no')">emoh 😿</button>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const card = document.getElementById('mainCard');
+    let noClickCount = 0;
+
+    function jawab(pilihan) {
+      if (pilihan === 'no') {
+        noClickCount++;
+
+        // Setiap klik "nggak", tombol mau jadi lebih besar
+        if (noClickCount === 1) {
+          yesBtn.style.transform = "scale(1.4)";
+        } else if (noClickCount === 2) {
+          yesBtn.style.transform = "scale(1.8)";
+        } else if (noClickCount === 3) {
+          yesBtn.style.transform = "scale(2.2)";
+          noBtn.style.opacity = "0";
+          setTimeout(() => {
+            noBtn.classList.add("hidden");
+            // Ganti tombol "Mau" jadi super besar
+            yesBtn.classList.add("yes-big");
+            yesBtn.innerText = "MAU BANGETTT 😍";
+            card.innerHTML = ""; // hapus isi kartu
+            document.body.appendChild(yesBtn); // pindah tombol ke tengah
+          }, 1000);
+        }
+      }
+
+      if (pilihan === 'yes') {
+        window.location.href = "serius.html";
+      }
+    }
+  </script>
+</body>
+</html>

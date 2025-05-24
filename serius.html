@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eh Serius Nih?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fefefe, #bde0fe);
+      color: #222;
+      padding: 2rem;
+      overflow-y: scroll;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .button-container {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .next-btn {
+      padding: 1rem 2rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #e73370;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>Eh... Serius kamu mau nerima aku? 😳</h2>
+
+  <div class="content">
+    <p>Berarti kamu juga siap nerima semua kekurangan aku dong...</p>
+    <p>Aku kasih tahu ya, kekuranganku tuh banyak banget loh 🥲</p>
+
+    <!-- 100 baris kekurangan -->
+    <div>
+      <ul>
+        <!-- Buat 100 item kekurangan -->
+        <script>
+            const list = [
+              "Suka insecure sendiri",
+              "Kadang overthinking hal kecil",
+              "Susah bangun pagi",
+              "Kalo lapar jadi nyebelin",
+              "Sering mager banget",
+              "Cemburuan tapi gak ngaku",
+              "Gampang panik",
+              "Kalo nge-chat suka typo",
+              "Mood swing ga jelas",
+              "Kadang terlalu pendiem",
+              "Kadang terlalu cerewet",
+              "Suka lupa naruh barang",
+              "Pelupa, tapi inget kamu",
+              "Gak bisa multitasking",
+              "Gampang tersinggung",
+              "Sering bingung sendiri",
+              "Kalo ngambek susah dibaikin",
+              "Gampang bosen",
+              "Bawaannya pengen rebahan",
+              "Sering buka HP padahal ngga penting",
+              "Gak bisa diem kalo lagi nervous",
+              "Muka susah disenyumin kadang",
+              "Susah bilang “nggak” ke orang",
+              "Gampang teralihkan fokus",
+              "Ngga jago masak",
+              "Ngga kuat nahan ngantuk",
+              "Kadang terlalu jujur",
+              "Gampang kena prank",
+              "Ngga bisa bohong, tapi suka coba",
+              "Mager mandi (kadang ya...)",
+              "Sering nunda-nunda kerjaan",
+              "Suka bikin worried orang lain",
+              "Sering nyimpen perasaan sendiri",
+              "Ngelucu tapi garing",
+              "Kadang suka ngomong duluan baru mikir",
+              "Sering mikir terlalu jauh",
+              "Gampang capek",
+              "Ga kuat olahraga",
+              "Lemah di matematika",
+              "Sering lupa hari",
+              "Gampang ke-distract musik",
+              "Ga jago dandan",
+              "Sering buka chat doang, ga bales",
+              "Kadang overreact",
+              "Susah milih makanan",
+              "Bisa ngambek cuma gara-gara mimpi",
+              "Terlalu banyak mikir “gimana kalo...”",
+              "Ngga suka disuruh",
+              "Kadang gak bisa bedain bercanda/serius",
+              "Sering minta dipeluk (walau jauh)",
+              "Ngga bisa jadi dingin kalo udah sayang",
+              "Bikin worried tapi ga sadar",
+              "Sering takut ngerepotin",
+              "Baperan",
+              "Susah jelasin isi hati",
+              "Kadang terlalu ngegas",
+              "Kadang terlalu slow",
+              "Ngga selalu ngerti kode",
+              "Sering salah paham",
+              "Suka ngomong “gapapa” padahal ada apa-apa",
+              "Kalo udah diem, susah diajak ngomong",
+              "Kadang suka over-analyze omongan",
+              "Suka nyimpen foto diam-diam",
+              "Gak pede liat kaca",
+              "Suka ngelamun",
+              "Ngga kuat liat kamu senyum",
+              "Kalo lagi sayang, suka nyebelin",
+              "Sering minta diyakinin",
+              "Bisa posesif",
+              "Terlalu gampang percaya",
+              "Gak enakan",
+              "Gampang ilfeel sama diri sendiri",
+              "Kadang suka drama kecil-kecilan",
+              "Gampang ke-trigger hal kecil",
+              "Bisa tiba-tiba badmood",
+              "Susah ngungkapin perasaan secara langsung",
+              "Kadang keras kepala",
+              "Suka lupa udah makan atau belum",
+              "Gampang ngerasa bersalah",
+              "Suka ngomel sendiri",
+              "Sering mikir, “aku cukup ga ya buat dia?”",
+              "Kalo udah nangis susah berhenti",
+              "Sering minta waktu padahal ga tau buat apa",
+              "Bisa cuek banget atau clingy banget",
+              "Kadang childish",
+              "Kadang terlalu dewasa buat usiaku",
+              "Susah banget move on dari satu rasa",
+              "Suka nulis hal-hal random tentang kamu",
+              "Bisa marah tapi takut nyakitin",
+              "Sering terlalu mikirin perasaan orang",
+              "Suka minta maaf padahal bukan salah",
+              "Ga bisa jadi versi ideal terus",
+              "Kadang takut kamu pergi",
+              "Susah jaga ekspresi",
+              "Suka ngomong hal random tengah malam",
+              "Kadang diem-diem nge-stalk",
+              "Suka bikin skenario di kepala",
+              "Gak ngerti kenapa kamu bisa suka aku",
+              "Takut dibilang lebay",
+              "Kekuranganku? Terlalu sayang kamu. 💗"
+            ];
+          
+            document.write('<ul>');
+            list.forEach((item, index) => {
+              document.write(`<li>${index + 1}. ${item}</li>`);
+            });
+            document.write('</ul>');
+          </script>
+          
+      </ul>
+    </div>
+
+    <div class="button-container">
+      <a href="ria1.html">
+        <button class="next-btn">Lanjut ke kejutan selanjutnya 🎁</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
